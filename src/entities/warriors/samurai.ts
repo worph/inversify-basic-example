@@ -1,16 +1,15 @@
 import { inject, injectable } from "inversify";
 
 import SERVICE_IDENTIFIER from "../../constants/identifiers";
-import { Weapon, Warrior } from "../../interfaces";
+import {Warrior, Weapon} from "../../interfaces";
+import {Lazy} from "../../interfaces/Lazy";
 
 @injectable()
 export class Samurai implements Warrior {
     public name: string;
-    public weapon: Weapon;
     public constructor(
-        @inject(SERVICE_IDENTIFIER.WEAPON) weapon: Weapon
+        @inject(SERVICE_IDENTIFIER.WEAPON_PROVIDER) public weapon: Lazy<Weapon>
     ) {
         this.name = "Samurai";
-        this.weapon = weapon;
     }
 }
