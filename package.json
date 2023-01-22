@@ -4,7 +4,8 @@
   "description": "A basic example that showcases how to setup InversifyJS",
   "main": "index.js",
   "scripts": {
-    "test": "gulp"
+    "dev": "tsc --watch",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -30,9 +31,6 @@
     "reflect-metadata": "0.1.13"
   },
   "devDependencies": {
-    "gulp": "4.0.2",
-    "gulp-tslint": "8.1.4",
-    "gulp-typescript": "5.0.1",
     "run-sequence": "2.2.1",
     "tslint": "5.19.0",
     "typescript": "3.5.3",

@@ -48,7 +48,7 @@ $ npm install
 And compile the TypeScript code into JavaScript code:
 
 ```
-$ gulp
+$ npm run build
 ```
 
 The generated code is available at the `dist` directory.
